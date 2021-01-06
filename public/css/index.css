@@ -1,0 +1,35 @@
+body{
+    margin: 0;
+}
+
+#topPart{
+    text-align: center;
+    margin-bottom: 5%;
+    padding: 2% 1%;
+    background-color: rgb(25, 25, 92);
+    color: white;
+}
+
+#leftSide {
+    margin-left: 3%;
+    cursor: pointer;
+    padding: 10% 15%;
+    font-size: 1.5em;
+    float: left;
+    background-color: gray;
+    color: white;
+}
+
+#rightSide {
+    margin-right: 3%;
+    cursor: pointer;
+    padding: 10% 15%;
+    font-size: 1.5em;
+    float: right;
+    color: white;
+    background-color: gray;
+}
+
+#rightSide:hover, #leftSide:hover {
+    background-color: rgb(25, 25, 92);
+}
