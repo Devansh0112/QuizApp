@@ -1,7 +1,6 @@
 const express = require("express");
 const cors = require("cors");
 const { MongoClient } = require("mongodb");
-const { urlencoded } = require("express");
 
 const uri = "mongodb://localhost:27017/quizproject";
 const client = new MongoClient(uri, { useUnifiedTopology: true });
@@ -13,12 +12,16 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.static("public"));
 
 const PORT = 3100;
+let quizList = [];
 
-app.post('/api/fetchQuestions' ,(req, res) => {
-    let quizName = req.body.name;
+app.get('/api/fetchQuestions' ,(req, res) => {
     let col = client.db('quizproject').collection('quizlist');
-    col.findOne({"Quiz Name": quizName}).then((data) => {
-      res.json(data); 
+    col.find({}).toArray((err, response) => {
+      if (err) console.log('Some Error Occured...');
+      else {
+        quizList = response;
+        res.json(response);
+      }
     });
 });
 

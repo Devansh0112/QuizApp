@@ -13,3 +13,27 @@ body{
     background-color: rgb(25, 25, 92);
     color: white;
 }
+
+.quizItem {
+    cursor: pointer;
+    border-radius: 10px;
+    width: 90%;
+    display: inline-block;
+    margin: 1% 2%;
+    padding: 1% 2%;
+    font-size: 0.8em;
+    background-color: gray;
+    color: white;
+}
+
+.quizItem:hover{
+    background-color: burlywood;
+}
+
+.left-side{
+    float: left;
+}
+
+.right-side{
+    float: right;
+}
