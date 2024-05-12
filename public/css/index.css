@@ -27,8 +27,9 @@ body{
     width: 50%;
     cursor: pointer;
     font-size: 1.5em;
+    font-weight: 600;
     background-color: gray;
-    transition: background-color 0.5s;
+    transition: background-color 0.5s, width 1s, left 1s;
 }
 
 
