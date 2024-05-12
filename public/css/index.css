@@ -28,7 +28,6 @@ body{
     cursor: pointer;
     font-size: 1.5em;
     font-weight: 600;
-    background-color: gray;
     transition: background-color 0.5s, width 1s, left 1s;
 }
 
@@ -39,6 +38,11 @@ body{
 
 #rightSide {
    left: 50%;
+   background-color: rgb(66, 72, 95);
+}
+
+#leftSide{
+    background-color: rgb(66, 92, 95);
 }
 
 #rightSide:hover, #leftSide:hover {
